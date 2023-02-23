@@ -1,0 +1,16 @@
+{
+	"discord": {
+		"Width": 800,
+		"Height": 600,
+		"X": 50,
+		"Y": 50,
+		"Repeat": 0
+	},
+	"spotify": {
+		"Width": 10,
+		"Height": 10,
+		"X": 1700,
+		"Y": 870,
+		"Repeat": 1
+	}
+}

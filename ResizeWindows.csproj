@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="debugpaths.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="if $(ConfigurationName) == Debug copy &quot;$(SolutionDir)\debugpaths.txt&quot; &quot;$(TargetDir)\debugpaths.txt&quot;" />
+  </Target>
+
+</Project>

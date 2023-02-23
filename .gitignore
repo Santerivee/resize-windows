@@ -1,0 +1,8 @@
+.vs
+.vscode
+bin
+obj
+config.json
+debugpaths.txt
+log.txt
+*.user
